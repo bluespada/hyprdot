@@ -6,21 +6,27 @@
 
 window {
     padding: 20px;
+    color: transparent;
     border-color: @primary;
-    border-radius: 20px;
+    border-radius: 6px;
     background-color: transparent;
 }
 
 #input {
-    margin: 4px;
+    margin: 12px;
     padding: 4px;
-    border-radius: 0px;
-    padding-left: 6px;
-    padding-right: 6px;
+    border-radius: 6px;
+    padding-left: 12px;
+    padding-right: 12px;
     font: 13px "Roboto Mono";
-    color: @primary;
+    color: @content;
     font-weight: 400;
     border: 1px solid @primary;
+    outline: none;
+}
+
+#input:focus {
+    border-color: transparent;
     outline: none;
 }
 
