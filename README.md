@@ -5,18 +5,24 @@ My Hyperland Dotfiles Repositories
 
 ## Required Packages
 
-| Package Name | Required |
-|---|---|
-| `hyprland` | Yes |
-| `ghostty` | Yes |
-| `hyprpaper` | Yes |
-| `kitty` | Yes |
-| `wofi` | Yes |
-| `waybar` | Yes |
+| Package Name | Required | Description |
+|---|---|---|
+| `hyprland` | Yes ||
+| `ghostty` | No ||
+| `hyprpaper` |Yes||
+| `kitty` | Yes ||
+| `wofi` | Yes ||
+| `playerctl` | Yes ||
+| `wpctl` | Yes ||
+| `brightnessctl` | Yes ||
+| `waybar` | Yes ||
+| `nerd-fonts` | No |Highly recomended to install nerd fonts especialy `GeistMono Nerd Fonts`|
+| `nvim` | No| for neovim configuration i use my own neovim configuration [here](https://github.com/bluespada/neocat)
 
 
 ## Credits
-- Base dotfiles by [@totoro-ghost](https://github.com/totoro-ghost/dotfiles)
+### Base Configurations
+This dotfiles is highly modified and configured based on dotfiles by [@totoro-ghost](https://github.com/totoro-ghost/dotfiles)
 
 ### Wallpaper
 |Images|Source|Author|
