@@ -3,11 +3,11 @@ term = xterm-256color
 font-family = "M+CodeLat50 Nerd Font Mono"
 font-size = 11.5
 
-# theme = catppuccin-frappe
+theme = catppuccin-macchiato
 # theme = OneHalfDark
-theme = Apple System Colors
-background-opacity = 0.95
-background-blur = 10
+# theme = Apple System Colors
+background-opacity = 0.75
+background-blur = 20
 
 window-vsync = 1
 window-decoration = auto
