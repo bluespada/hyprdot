@@ -1,5 +1,9 @@
+allow_images=true
 width=650
-height=256
+height=400
+term=ghostty
+hide_scroll=false
+insensitive=true
+no_actions=true
 mode=drun
 filter_rate=100
-style=style.css

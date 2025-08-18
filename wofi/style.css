@@ -1,25 +1,27 @@
+@define-color base0 #24273a;
+@define-color content #cad3f5;
+@define-color accent #181926;
+@define-color primary #c6a0f6;
+
+
 window {
-    background-color: #282c34;
-    border-color: #37474F;
-    border-width: 2px;
-    border-style: solid;
+    padding: 20px;
+    border-color: @primary;
+    border-radius: 20px;
+    background-color: transparent;
 }
 
 #input {
-    margin: 0px;
-    padding: 0px;
+    margin: 4px;
+    padding: 4px;
     border-radius: 0px;
     padding-left: 6px;
-    padding-right: 4px;
-    border: solid 1px rgba(55, 71, 79, 1);
+    padding-right: 6px;
     font: 13px "Roboto Mono";
-    color: #98c379;
+    color: @primary;
     font-weight: 400;
-    border: none;
-}
-
-#input:focus, #input:active {
-    border: none;
+    border: 1px solid @primary;
+    outline: none;
 }
 
 #filter {
@@ -27,35 +29,40 @@ window {
 }
 
 #inner-box {
-    margin: 0px;
-    background-color: rgba(40, 44, 52, 1);
+    margin: 8px;
+    background-color: @base0;
     border: none;
 }
 
 #outer-box {
-    margin: 2px;
+    margin: 0px;
     border: none;
-    background-color: rgba(40, 44, 52, 1);
+    background-color: @base0;
 }
 
 #entry {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 12px;
+    padding-right: 12px;
     background-color: transparent;
     border-radius: 0;
 }
 
 #entry:selected {
-    background-color: #61afef;
+    background-color: @primary;
     border: none;
-    border-radius: 0;
+    border-radius: 6px;
     outline: none;
 }
 
 #text {
-    padding: 0px;
-    color: #61afef;
+    padding-right: 4px;
+    padding-left: 8px;
+    color: @content;
     font: 13px "Roboto Mono";
 }
 
 #text:selected {
-    color: #282c34;
+    color: @accent;
 }
