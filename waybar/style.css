@@ -71,11 +71,26 @@ window#waybar {
 
 #clock {
     margin-right: 10px;
-    color: #f5e0dc; /* Catppuccin Macchiato clock color */
+    color: #cad3f5; /* Catppuccin Macchiato clock color */
 }
 
 #clock:hover {
     background-color: #3b4056;  /* Catppuccin Macchiato hover bg */
     color: #cad3f5;
     transition: background-color 0.1s, color 0.2s;
+}
+
+#clock tooltip {
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
+#clock tooltip label {
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    font-size: 15px;
 }

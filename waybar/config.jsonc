@@ -51,7 +51,7 @@
         "path": "/"
     },
     "clock": {
-        "format": "<span color='#c6a0f6'> </span> {:%H:%M %p}",
+        "format": "<span color='#c6a0f6'> </span> <span color='#cad3f5'>{:%H:%M %p}</span>",
         "tooltip": true,
         "tooltip-format": "<span color='#56b6c2'> </span>\n{calendar}",
         "calendar": {
@@ -63,8 +63,8 @@
                 "months": "<span color='#c6a0f6'><b>{}</b></span>",
                 "days": "<span color='#cad3f5'><b>{}</b></span>",
                 "weeks": "<span color='#c678dd'><b>W{}</b></span>",
-                "weekdays": "<span color='#f5e0dc'><b>{}</b></span>",
-                "today": "<span color='#98c379'><b><u>{}</u></b></span>"
+                "weekdays": "<span color='#e5c890'><b>{}</b></span>",
+                "today": "<span color='#a6d189'><b><u>{}</u></b></span>"
             }
         },
         "actions": {
@@ -75,7 +75,7 @@
     },
     "backlight": {
         "device": "intel_backlight",
-        "format": "<span color='#d19a66'>{icon}</span> {percent}%",
+        "format": "<span color='#c6a0f6'>{icon}</span> {percent}%",
         "format-icons": ["", "", "", "", "", "", "", "", ""]
     },
     "pulseaudio": {

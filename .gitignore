@@ -6,6 +6,7 @@
 !/waybar
 !/wofi
 !/fastfetch
+!/fish/config.fish
 
 !starship.toml
 !.gitignore

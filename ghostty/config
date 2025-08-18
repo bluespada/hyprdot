@@ -14,3 +14,5 @@ window-decoration = auto
 window-colorspace = srgb
 
 bold-is-bright = true
+
+# keybind = keybind = performable:ctrl+c=copy_to_clipboard
