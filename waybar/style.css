@@ -1,0 +1,81 @@
+* {
+    border: none;
+    font-family: 'GeistMono Nerd Font', 'Symbols Nerd Font Mono';
+    font-size: 12.5px;
+    font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
+    min-height: 24px;
+}
+
+window#waybar {
+    background: transparent;
+}
+
+#custom-arch, #workspaces {
+    border-radius: 10px;
+    background-color: #1e222a; /* One Dark background */
+    color: #abb2bf;            /* One Dark foreground */
+    margin-top: 15px;
+    margin-right: 10px;
+    padding-top: 0px;
+    padding-left: 9px;
+    padding-right: 9px;
+}
+
+#custom-arch {
+    font-size: 20px;
+    margin-left: 15px;
+    color: #73ba25; 
+}
+
+#workspaces button {
+    background: #1e222a;
+    color: #abb2bf;
+}
+
+#workspaces button.active {
+    background: #1e222a;
+    color: #73ba25;
+}
+
+#tray, #memory, #cpu, #disk, #clock, #backlight, #pulseaudio, #bluetooth, #network, #battery {
+    border-radius: 10px;
+    background-color: #1e222a;
+    color: #abb2bf;
+    margin-top: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-right: 15px;
+}
+
+/* Grouping tweaks for seamless segments */
+#memory {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    margin-right: 0;
+}
+
+#cpu, #backlight, #bluetooth {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    padding-right: 5px;
+    margin-right: 0;
+}
+
+#disk, #pulseaudio, #network {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    padding-left: 5px;
+}
+
+#clock {
+    margin-right: 10;
+    color: #e5c07b; /* Yellow for clock */
+}
+
+#clock:hover {
+    background-color: #2c313c;  /* One Dark hover bg */
+    color: #abb2bf;
+    transition: background-color 0.1s, color 0.2s;
+}
