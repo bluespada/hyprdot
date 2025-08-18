@@ -27,12 +27,12 @@
     },
     "cpu": {
         "interval": 1,
-        "format": "<span color='#61afef'>{icon} </span> {usage}%",
+        "format": "<span color='#c6a0f6'>{icon} </span> {usage}%",
         "format-icons": [
-            "<span color='#61afef'>▁</span>",
+            "<span color='#c6a0f6'>▁</span>",
             "<span color='#56b6c2'>▂</span>",
             "<span color='#98c379'>▃</span>",
-            "<span color='#e5c07b'>▄</span>",
+            "<span color='#f5e0dc'>▄</span>",
             "<span color='#d19a66'>▅</span>",
             "<span color='#e06c75'>▆</span>",
             "<span color='#c678dd'>▇</span>",
@@ -41,17 +41,17 @@
     },
     "memory": {
         "interval": 1,
-        "format": "<span color='#61afef'> </span>{percentage}%",
+        "format": "<span color='#c6a0f6'> </span>{percentage}%",
         "max-length": 10
     },
     "disk": {
         "interval": 1,
-        "format": "<span color='#61afef'> </span> {specific_used:0.2f} GB",
+        "format": "<span color='#c6a0f6'> </span> {specific_used:0.2f} GB",
         "unit": "GB",
         "path": "/"
     },
     "clock": {
-        "format": "<span color='#61afef'> </span> {:%H:%M %p}",
+        "format": "<span color='#c6a0f6'> </span> {:%H:%M %p}",
         "tooltip": true,
         "tooltip-format": "<span color='#56b6c2'> </span>\n{calendar}",
         "calendar": {
@@ -60,10 +60,10 @@
             "weeks-pos": "right",
             "on-scroll": 1,
             "format": {
-                "months": "<span color='#61afef'><b>{}</b></span>",
-                "days": "<span color='#abb2bf'><b>{}</b></span>",
+                "months": "<span color='#c6a0f6'><b>{}</b></span>",
+                "days": "<span color='#cad3f5'><b>{}</b></span>",
                 "weeks": "<span color='#c678dd'><b>W{}</b></span>",
-                "weekdays": "<span color='#e5c07b'><b>{}</b></span>",
+                "weekdays": "<span color='#f5e0dc'><b>{}</b></span>",
                 "today": "<span color='#98c379'><b><u>{}</u></b></span>"
             }
         },
@@ -79,7 +79,7 @@
         "format-icons": ["", "", "", "", "", "", "", "", ""]
     },
     "pulseaudio": {
-        "format": "<span color='#61afef'>{icon}</span> {volume}%",
+        "format": "<span color='#c6a0f6'>{icon}</span> {volume}%",
         "format-muted": "",
         "tooltip": false,
         "format-icons": {
@@ -89,9 +89,9 @@
         "scroll-step": 1
     },
     "bluetooth": {
-        "format": "<span color='#61afef'></span> {status}",
+        "format": "<span color='#c6a0f6'></span> {status}",
         "format-disabled": "",
-        "format-connected": "<span color='#61afef'></span> {num_connections}",
+        "format-connected": "<span color='#c6a0f6'></span> {num_connections}",
         "tooltip-format": "{device_enumerate}",
         "tooltip-format-enumerate-connected": "{device_alias}   {device_address}"
     },
@@ -104,7 +104,7 @@
         "tooltip": false
     },
     "battery": {
-        "format": "<span color='#61afef'>{icon}</span> {capacity}%",
+        "format": "<span color='#c6a0f6'>{icon}</span> {capacity}%",
         "format-icons": ["󰂃", "󰂃", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󱟢"],
         "format-charging": "<span color='#98c379'>󰂄</span> {capacity}%",
         "tooltip": false

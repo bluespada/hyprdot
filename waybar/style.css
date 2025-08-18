@@ -12,8 +12,8 @@ window#waybar {
 
 #custom-arch, #workspaces {
     border-radius: 10px;
-    background-color: #1e222a; /* One Dark background */
-    color: #abb2bf;            /* One Dark foreground */
+    background-color: #24273a; /* Catppuccin Macchiato base */
+    color: #cad3f5;             /* Catppuccin Macchiato text */
     margin-top: 15px;
     margin-right: 10px;
     padding-top: 0px;
@@ -24,23 +24,23 @@ window#waybar {
 #custom-arch {
     font-size: 20px;
     margin-left: 15px;
-    color: #73ba25; 
+    color: #c6a0f6;  /* Catppuccin Macchiato primary */
 }
 
 #workspaces button {
-    background: #1e222a;
-    color: #abb2bf;
+    background: #24273a;
+    color: #cad3f5;
 }
 
 #workspaces button.active {
-    background: #1e222a;
-    color: #73ba25;
+    background: #24273a;
+    color: #c6a0f6;
 }
 
 #tray, #memory, #cpu, #disk, #clock, #backlight, #pulseaudio, #bluetooth, #network, #battery {
     border-radius: 10px;
-    background-color: #1e222a;
-    color: #abb2bf;
+    background-color: #24273a;
+    color: #cad3f5;
     margin-top: 15px;
     padding-left: 10px;
     padding-right: 10px;
@@ -70,12 +70,12 @@ window#waybar {
 }
 
 #clock {
-    margin-right: 10;
-    color: #e5c07b; /* Yellow for clock */
+    margin-right: 10px;
+    color: #f5e0dc; /* Catppuccin Macchiato clock color */
 }
 
 #clock:hover {
-    background-color: #2c313c;  /* One Dark hover bg */
-    color: #abb2bf;
+    background-color: #3b4056;  /* Catppuccin Macchiato hover bg */
+    color: #cad3f5;
     transition: background-color 0.1s, color 0.2s;
 }
