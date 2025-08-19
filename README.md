@@ -7,17 +7,19 @@ My Hyperland Dotfiles Repositories
 
 | Package Name | Required | Description |
 |---|---|---|
-| `hyprland` | Yes ||
-| `ghostty` | No ||
-| `hyprpaper` |Yes||
-| `kitty` | Yes ||
-| `wofi` | Yes ||
-| `playerctl` | Yes ||
-| `wpctl` | Yes ||
-| `brightnessctl` | Yes ||
-| `waybar` | Yes ||
+| `hyprland` | Yes | |
+| `ghostty` | No | |
+| `hyprpaper` | Yes | |
+| `kitty` | Yes | |
+| `wofi` | Yes | |
+| `playerctl` | Yes | |
+| `wpctl` | Yes | |
+| `brightnessctl` | Yes | |
+| `waybar` | Yes | |
 | `nerd-fonts` | No |Highly recomended to install nerd fonts especialy `GeistMono Nerd Fonts`|
-| `nvim` | No| for neovim configuration i use my own neovim configuration [here](https://github.com/bluespada/neocat)
+| `nvim` | No | for neovim configuration i use my own neovim configuration [here](https://github.com/bluespada/neocat)|
+| `eww`| Yes | |
+| `Swaync`| Yes | |
 
 
 ## Credits

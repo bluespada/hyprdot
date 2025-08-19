@@ -1,0 +1,114 @@
+(defwindow vol-osd[]
+    :monitor 0
+    :class "osd"
+    :stacking "overlay"
+    :geometry (geometry
+        :transition "crossfade"
+        :class "osd-box"
+        :anchor "bottom center"
+        :y 130
+        :width "200px"
+        :height "50px"
+    )
+    (box
+        :class "osd-box"
+        :valign "center"
+        :orientation "v"
+        :space-evenly false
+        :offset-y "50%"
+        (label
+            :class "osd-title"
+            :text "Volume"
+        )
+        (label
+            :class "osd-value"
+            :text "Volume"
+        )
+        (box
+            :orientation "h"
+            :halign "center"
+            :space-evenly false
+            (label
+                :class "osd-icons"
+                :text "󰕾"
+            )
+            (progress
+                :class "osd-progress"
+                :value "40"
+                :width "280px"
+            )
+        )
+    )
+)
+
+(defwindow brightness-osd[]
+    :monitor 0
+    :class "osd"
+    :stacking "overlay"
+    :geometry (geometry
+        :transition "crossfade"
+        :class "osd-box"
+        :anchor "bottom center"
+        :y 130
+        :width "200px"
+        :height "50px"
+    )
+    (box
+        :class "osd-box"
+        :valign "center"
+        :orientation "v"
+        :space-evenly false
+        :offset-y "50%"
+        (label
+            :class "osd-title"
+            :text "Brightness"
+        )
+        (label
+            :class "osd-value"
+            :text "Brightness"
+        )
+        (box
+            :orientation "h"
+            :halign "center"
+            :space-evenly false
+            (label
+                :class "osd-icons"
+                :text "󰃟"
+            )
+            (progress
+                :class "osd-progress"
+                :value "40"
+                :width "280px"
+            )
+        )
+    )
+)
+
+(defwindow osd[]
+    :monitor 0
+    :class "osd"
+    :stacking "overlay"
+    :geometry (geometry
+        :transition "crossfade"
+        :class "osd-box"
+        :anchor "bottom center"
+        :y 130
+        :width "200px"
+        :height "50px"
+    )
+    (box
+        :class "osd-box"
+        :valign "center"
+        :orientation "v"
+        :space-evenly false
+        :offset-y "50%"
+        (label
+            :class "osd-title"
+            :text "OSD"
+        )
+        (label
+            :class "osd-value"
+            :text "OSD Value"
+        )
+    )
+)

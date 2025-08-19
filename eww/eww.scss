@@ -1,0 +1,9 @@
+@import "./themes/catppuccin-macchiato.scss";
+
+@import "./osd/osd.scss";
+
+* {
+  all: unset;
+  font-family: 'NotoSansM Nerd Font', 'Symbols Nerd Font Mono';
+  font-size: 14px;
+}

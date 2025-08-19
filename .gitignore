@@ -7,6 +7,10 @@
 !/wofi
 !/fastfetch
 !/fish/config.fish
+!/wallpaper
+!/scripts
+!/eww
+!/swaync
 
 !starship.toml
 !.gitignore

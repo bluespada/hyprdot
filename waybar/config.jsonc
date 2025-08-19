@@ -76,7 +76,8 @@
     "backlight": {
         "device": "intel_backlight",
         "format": "<span color='#c6a0f6'>{icon}</span> {percent}%",
-        "format-icons": ["", "", "", "", "", "", "", "", ""]
+        "format-icons": ["", "", "", "", "", "", "", "", ""],
+        "tooltip": false
     },
     "pulseaudio": {
         "format": "<span color='#c6a0f6'>{icon}</span> {volume}%",
@@ -94,14 +95,6 @@
         "format-connected": "<span color='#c6a0f6'></span> {num_connections}",
         "tooltip-format": "{device_enumerate}",
         "tooltip-format-enumerate-connected": "{device_alias}   {device_address}"
-    },
-    "network": {
-        "interface": "wlan0",
-        "format": "{ifname}",
-        "format-wifi": "<span color='#56b6c2'> </span> {essid}",
-        "format-ethernet": "{ipaddr}/{cidr} ",
-        "format-disconnected": "<span color='#e06c75'>󰖪 </span>No Network",
-        "tooltip": false
     },
     "battery": {
         "format": "<span color='#c6a0f6'>{icon}</span> {capacity}%",

@@ -1,0 +1,39 @@
+
+.vol-osd {
+  background-color: transparent;
+  border-radius: $rounded;
+  padding-top: 6px;
+  padding-bottom: 12px;
+  padding-left: 14px;
+  padding-right: 14px;
+}
+
+.osd-box {
+  background-color: $base-transparent;
+  border: 1px solid $border;
+}
+
+
+.osd-value {
+  color: $content;
+  font-size: 12px;
+}
+
+.osd-icons {
+  color: $content;
+  margin-bottom: -8px;
+  padding-right: 12px;
+  font-size: 18px;
+}
+
+.osd-progress trough {
+  background-color: $content-transparent;
+  border-radius: $rounded;
+  min-width: 200px;
+}
+
+.osd-progress progress {
+  padding: 2.5px;
+  background-color: $content;
+  border-radius: $rounded;
+}
