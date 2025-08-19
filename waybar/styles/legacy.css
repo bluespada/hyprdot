@@ -1,0 +1,110 @@
+* {
+    border: none;
+    font-family: 'RobotoMono Nerd Font', 'Symbols Nerd Font Mono';
+    font-size: 13px;
+    font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
+    min-height: 24px;
+}
+
+window#waybar {
+    background: transparent;
+}
+
+
+#custom-arch {
+    border-radius: 12px;
+    background-color: #24273a; /* Catppuccin Macchiato base */
+    color: #cad3f5;             /* Catppuccin Macchiato text */
+    margin-top: 15px;
+    margin-right: 15px;
+    padding-top: 0px;
+    padding-left: 9px;
+    padding-right: 9px;
+}
+
+
+#custom-arch {
+    font-size: 20px;
+    margin-left: 15px;
+    color: #c6a0f6;  /* Catppuccin Macchiato primary */
+}
+
+#workspaces {
+    background: #24273a;
+    font-size: 12px;
+    border-radius: 12px;
+    margin-top: 15px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+#workspaces button {
+    background: #24273a;
+    color: #cad3f5;
+    border-radius: 100%;
+}
+
+#workspaces button:hover {
+    background: #24273a;
+    color: #c6a0f6;
+}
+
+#workspaces button.active {
+    background: #24273a;
+    color: #c6a0f6;
+}
+
+#workspaces button.urgent {
+    color: #eed49f;
+}
+
+#memory, #cpu, #disk, #clock, #backlight, #pulseaudio, #bluetooth, #network, #battery, #tray {
+    border-radius: 12px;
+    background-color: #24273a;
+    color: #cad3f5;
+    margin-top: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+/* Grouping tweaks for seamless segments */
+#memory, #pulseaudio {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    margin-right: 0;
+}
+
+#cpu, #backlight, #bluetooth, #tray {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    padding-right: 5px;
+    margin-right: 0;
+}
+
+#disk, #battery, #tray {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    padding-left: 5px;
+}
+
+#tray {
+    padding-right: 14px;
+}
+
+#clock {
+    margin-right: 10px;
+    color: #cad3f5; /* Catppuccin Macchiato clock color */
+}
+
+#clock:hover {
+    background-color: #3b4056;  /* Catppuccin Macchiato hover bg */
+    color: #cad3f5;
+    transition: background-color 0.1s, color 0.2s;
+}
+
+#disk, #battery {
+    margin-right: 12px;
+}
+
