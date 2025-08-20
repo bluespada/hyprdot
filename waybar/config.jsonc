@@ -11,12 +11,25 @@
         "backlight",
         "pulseaudio",
         "tray",
+        "custom/notification",
         "battery",
         "clock"
     ],
     "custom/arch": {
         "format": "  ",
         "tooltip": false
+    },
+    "custom/notification": {
+        "interval": 1,
+        "format": "{icon}",
+        "return-type": "json",
+        "format-icons": {
+            "active": "<span color='#ed8796'>󱅫</span>",
+            "default": "<span color='#c6a0f6'></span>"
+        },
+        "tooltip": false,
+        "exec": "~/.config/waybar/script swc --get",
+        "on-click": "~/.config/waybar/script swc --toggle"
     },
     "hyprland/workspaces": {
         "format": "{icon}",

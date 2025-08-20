@@ -30,6 +30,7 @@ tooltip {
 }
 
 
+
 #custom-arch {
     font-size: 24px;
     color: #c6a0f6;  /* Catppuccin Macchiato primary */
@@ -63,7 +64,7 @@ tooltip {
     color: #eed49f;
 }
 
-#memory, #cpu, #disk, #clock, #backlight, #pulseaudio, #bluetooth, #network, #battery, #tray {
+#memory, #cpu, #disk, #clock, #backlight, #pulseaudio, #bluetooth, #network, #battery, #tray, #custom-notification {
     border-radius: 12px;
     background-color: #24273a;
     color: #cad3f5;
@@ -71,8 +72,16 @@ tooltip {
     padding-right: 10px;
 }
 
+#custom-notification {
+    border-radius: 0;
+    background-color: #24273a;
+    padding-left: 5px;
+    padding-right: 15px;
+    margin-right: 0;
+}
+
 /* Grouping tweaks for seamless segments */
-#memory, #pulseaudio {
+#memory, #pulseaudio  {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
     border-top-left-radius: 0;

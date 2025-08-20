@@ -1,8 +1,8 @@
 * {
   all: unset;
   font-size: 14px;
-  font-family: "Ubuntu Nerd Font";
-  transition: 200ms;
+  font-family: "ComicShannsMono Nerd Font";
+  transition: 350ms;
 }
 
 trough highlight {
@@ -14,7 +14,7 @@ scale {
 }
 
 scale trough {
-  margin: 0rem 1rem;
+  margin: 0rem 10rem;
   min-height: 8px;
   min-width: 70px;
   border-radius: 12.6px;

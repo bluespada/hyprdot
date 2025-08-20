@@ -9,7 +9,7 @@ uniform sampler2D screenTexture;  // Tekstur layar (tampilan)
 void main()
 {
     // Ambil warna dari layar menggunakan koordinat fragmen (x, y) langsung
-    vec4 color = texture(screenTexture, vec2(gl_FragCoord.x / 1366.0, gl_FragCoord.y / 768.0)); 
+    vec4 color = texture(screenTexture, vec2(gl_FragCoord.x / 1920.0, gl_FragCoord.y / 1080.0)); 
 
     // Mengurangi komponen biru untuk mengurangi cahaya biru
     float redBoost = 1.0;  // Komponen merah tetap
@@ -23,7 +23,7 @@ void main()
 
     // Efek distorsi chroma (distorsi warna)
     vec2 center = vec2(0.5, 0.5);  // Pusat layar
-    vec2 offset = (vec2(gl_FragCoord.x / 1366.0, gl_FragCoord.y / 768.0) - center) * STRENGTH;
+    vec2 offset = (vec2(gl_FragCoord.x / 1920.0, gl_FragCoord.y / 1080.0) - center) * STRENGTH;
 
     // Menggunakan sqrt untuk distorsi yang lebih lembut
     float rSquared = dot(offset, offset);
@@ -35,8 +35,8 @@ void main()
     vec2 blueOffset = vec2(distortedOffset.x, distortedOffset.y);
 
     // Ambil warna dari layar dengan offset yang terdistorsi
-    vec4 redColor = texture(screenTexture, vec2(gl_FragCoord.x / 1366.0, gl_FragCoord.y / 768.0) + redOffset);
-    vec4 blueColor = texture(screenTexture, vec2(gl_FragCoord.x / 1366.0, gl_FragCoord.y / 768.0) + blueOffset);
+    vec4 redColor = texture(screenTexture, vec2(gl_FragCoord.x / 1920.0, gl_FragCoord.y / 1080.0) + redOffset);
+    vec4 blueColor = texture(screenTexture, vec2(gl_FragCoord.x / 1920.0, gl_FragCoord.y / 1080.0) + blueOffset);
 
     // Gabungkan warna yang sudah terdistorsi
     FragColor = vec4(redColor.r, color.g, blueColor.b, 0.9);

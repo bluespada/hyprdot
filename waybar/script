@@ -1,0 +1,44 @@
+#!/usr/bin/python3
+import subprocess
+import json
+import argparse
+import sys
+
+waybar_data = {"text": "","alt": "", "tooltip": "", "class": "", "percentage": 0 }
+
+def swc_hooks(param):
+    """
+    Hooks for swaync-client
+    """
+    if param.get :
+        command = ["swaync-client", "--count"]
+        result = subprocess.run(command, check=True, text=True, capture_output=True)
+        count = result.stdout
+        waybar_data["text"] = count
+        if int(count) > 0:
+            waybar_data["alt"] = "active"
+        else:
+            waybar_data["alt"] = "default"
+        result_json = json.dumps(waybar_data)
+        print(result_json)
+        return
+    elif param.toggle:
+        command = ["swaync-client", "-t"]
+        subprocess.run(command, check=True)
+
+if __name__ == "__main__":
+    cmd_parser = argparse.ArgumentParser(description="Waybar Actions")
+    subparser = cmd_parser.add_subparsers(dest="command")
+
+    notif = subparser.add_parser("swc", description="Swaync-client notification")
+    notif.add_argument("--get", action="store_true")
+    notif.add_argument("--toggle", action="store_true")
+    notif.set_defaults(func=swc_hooks)
+    
+    args = cmd_parser.parse_args(args=None if sys.argv[1:] else ['--help'])
+
+    if hasattr(args, "func"):
+        args.func(args)
+
+
+

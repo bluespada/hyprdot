@@ -1,6 +1,7 @@
 // vim: set ft=glsl:
 // blue light filter shader
 // values from https://reshade.me/forum/shader-discussion/3673-blue-light-filter-similar-to-f-lux
+#version 320e es
 
 precision mediump float;
 varying vec2 v_texcoord;

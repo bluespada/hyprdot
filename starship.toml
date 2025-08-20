@@ -1,47 +1,52 @@
-# Don't print a new line at the start of the prompt
 add_newline = false
+continuation_prompt = "[󰞷](dimmed white)[](bold dimmed white)[](bold dimmed magenta)[󰅂](bold dimmed blue)"
 
-# Replace the "❯" symbol in the prompt with "➜"
-[character]                            # The name of the module we are configuring is "character"
-# success_symbol = "[](bold green)[](bold yellow)[](bold red)[](bold purple)"     # The "success_symbol" segment is being set to "➜" with the color "bold green"
-success_symbol = "[](bold dimmed white)[](bold white)[](bold magenta)[󰅂](bold blue)"     # The "success_symbol" segment is being set to "➜" with the color "bold green"
+right_format = """
+"""
 
-error_symbol = "[](bold dimmed white)[](bold white)[](bold magenta)[](bold red)"     # The "success_symbol" segment is being set to "➜" with the color "bold green"
-# Disable the package module, hiding it from the prompt completely
+[character]
+success_symbol = "[](bold dimmed white)[](bold white)[](bold magenta)[󰅂](bold blue)"
+error_symbol = "[](bold dimmed white)[](bold white)[](bold magenta)[](bold red)"
+
 [package]
 disabled = true
 
 [git_branch]
-symbol = " " # nf-oct-git_branch
+symbol = " "
 truncation_length = 4
 truncation_symbol = ""
 style = "bold megenta"
 
 [git_commit]
 commit_hash_length = 4
-tag_symbol = " " # nf-fa-tag
+tag_symbol = " "
 
 [git_state]
 format = '[\($state( $progress_current of $progress_total)\)]($style) '
-cherry_pick = "[ PICKING](bold red)" # nf-seti-cherry
+cherry_pick = "[ PICKING](bold red)"
+
+[cmd_duration]
+disabled = false
+format = '[$duration](bold magenta) [󰅒](bold blue)'
 
 [git_status]
-conflicted = ""        # nf-dev-git_merge
-ahead = " "            # nf-fa-arrow_up
-behind = " "           # nf-fa-arrow_down
-diverged = "󰨁 "         # nf-mdi-map_legend (for diverged)
-untracked = ""        # nf-fa-question_circle
-stashed = "󰆼 "          # nf-mdi-database (symbolic for stash)
-modified = " "         # nf-oct-pencil
-staged = '[\($count\)](green)'  # nf-fa-plus_circle
-renamed = " "          # nf-oct-file_symlink_file
-deleted = " "          # nf-fa-trash
+conflicted = ""
+ahead = " "
+behind = " "
+diverged = "󰨁 "
+untracked = "[](yellow) "
+stashed = "󰆼 "
+modified = " "
+staged = '[ \($count\)](green) '
+renamed = " "
+deleted = " "
 style = "bold purple"
+format = "$all_status$ahead_behind"
 
 [hostname]
 ssh_only = false
-format =  "on [Karakura](bold cyan) " # nf-cod-server
-trim_at = ".companyname.com"
+format =  "on [$hostname](bold cyan) "
+trim_at = ".localdomain"
 disabled = false
 
 [line_break]
@@ -50,12 +55,12 @@ disabled = false
 [memory_usage]
 disabled = true
 threshold = -1
-symbol = " " # nf-mdi-memory
+symbol = " "
 style = "bold dimmed green"
 
 [time]
 disabled = true
-format = ' [\[$time\]]($style) ' # nf-fa-clock_o
+format = '[](blue) [$time](dimmed blue) '
 time_format = "%T"
 
 [username]
@@ -69,3 +74,43 @@ show_always = true
 style = "bold blue"
 truncation_length = 2
 truncation_symbol = "./"
+
+[rust]
+symbol = ""
+format = "via [$symbol ($version)](bold red) "
+
+[nodejs]
+symbol = "󰎙"
+format = "via [$symbol](bold green) "
+
+[bun]
+symbol = ""
+format = "via [$symbol ($version)](bold white) "
+
+[dart]
+symbol = ""
+format = "via [$symbol ($version)](bold sky) "
+
+[python]
+symbol = ""
+format = "via [$symbol ($version)](bold green) "
+
+[java]
+symbol = ""
+format = "via [$symbol ($version)](bold white) "
+
+[kotlin]
+symbol = ""
+format = "via [$symbol ($version)](bold blue) "
+
+[gradle]
+symbol = ""
+format = "via [$symbol ($version)](bold cyan) "
+
+[php]
+symbol = ""
+format = "via [$symbol ($version)](bold blue) "
+
+[zig]
+symbol = ""
+format = "via [$symbol ($version)](bold yellow) "
