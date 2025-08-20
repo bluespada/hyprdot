@@ -28,8 +28,8 @@
             "default": "<span color='#c6a0f6'></span>"
         },
         "tooltip": false,
-        "exec": "~/.config/waybar/script swc --get",
-        "on-click": "~/.config/waybar/script swc --toggle"
+        "exec": "~/.config/bin/hyprdot swc --get",
+        "on-click": "~/.config/bin/hyprdot swc --toggle"
     },
     "hyprland/workspaces": {
         "format": "{icon}",

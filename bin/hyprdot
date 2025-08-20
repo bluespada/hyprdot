@@ -1,0 +1,97 @@
+#!/usr/bin/python3
+import subprocess
+import json
+import argparse
+import sys
+from datetime import datetime
+
+waybar_data = {"text": "","alt": "", "tooltip": "", "class": "", "percentage": 0 }
+
+def notify(title="Hyprdot", messages=""):
+    command = ["notify-send", title, messages]
+    subprocess.run(
+        command,
+        text=False, capture_output=False,
+    )
+
+def screenshot(param):
+    date = datetime.now()
+    if param.full :
+        subprocess.run(
+            "grim - | wl-copy",
+            shell=True
+        )
+        notify(messages="Full Screenshot Captured and copied to clipboard")
+        return
+    if param.full_select:
+        subprocess.run(
+            'grim -g "$(slurp)" - | wl-copy',
+            shell=True,
+        )
+        notify(messages="Screenshot captured and copied to clipboard")
+        return
+
+    if param.save_full:
+        subprocess.run(
+            'grim "$HOME/Pictures/Screenshots/Screenshot From '+str(date)+'.png"',
+            shell=True
+        )
+        notify(messages="Full Screenshot Captured and saved to file")
+        return
+
+    if param.save_select:
+        subprocess.run(
+            'grim -g "$(slurp)" "$HOME/Pictures/Screenshots/Screenshot From '+str(date)+'.png"',
+            shell=True,
+        )
+        notify(messages="Screenshot captured and saved to file")
+        return
+
+
+
+def swc_hooks(param):
+    """
+    Hooks for swaync-client
+    """
+    if param.get :
+        command = ["swaync-client", "--count"]
+        result = subprocess.run(command, check=True, text=True, capture_output=True)
+        count = result.stdout
+        waybar_data["text"] = count
+        if int(count) > 0:
+            waybar_data["alt"] = "active"
+        else:
+            waybar_data["alt"] = "default"
+        result_json = json.dumps(waybar_data)
+        print(result_json)
+        return
+    elif param.toggle:
+        command = ["swaync-client", "-t"]
+        subprocess.run(command, check=True)
+
+if __name__ == "__main__":
+    cmd_parser = argparse.ArgumentParser(description="Waybar Actions")
+    subparser = cmd_parser.add_subparsers(dest="command")
+
+    cmd_notif = subparser.add_parser("swc", description="Swaync-client notification")
+    cmd_notif.add_argument("--get", action="store_true")
+    cmd_notif.add_argument("--toggle", action="store_true")
+    cmd_notif.set_defaults(func=swc_hooks)
+
+    cmd_ss = subparser.add_parser("ss", description="Screenshot helper")
+    cmd_ss.add_argument("--full", action="store_true")
+    cmd_ss.add_argument("--full-select", action="store_true")
+    cmd_ss.add_argument("--save-full", action="store_true")
+    cmd_ss.add_argument("--save-select", action="store_true")
+
+    cmd_ss.set_defaults(func=screenshot)
+
+
+    
+    args = cmd_parser.parse_args(args=None if sys.argv[1:] else ['--help'])
+
+    if hasattr(args, "func"):
+        args.func(args)
+
+
+
