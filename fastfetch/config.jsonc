@@ -7,18 +7,18 @@
             "title": "blue"
         }
     },
-   "logo": {
-       "source": "~/.config/fastfetch/cat.txt",
-       "height": 6,
-       "padding": {
-           "top": 2,
-           "left": 3,
-           "right": 12,
-       },
-       "color": {
-           "1": "magenta"
-       }
-   },
+    "logo": {
+        "source": "~/.config/fastfetch/cat.txt",
+        "height": 6,
+        "padding": {
+            "top": 2,
+            "left": 3,
+            "right": 12,
+        },
+        "color": {
+            "1": "magenta"
+        }
+    },
     "modules": [
         "break",
         "break",
@@ -68,9 +68,12 @@
             "key": " 󰏗 ",
             "keyColor": "34"
         },
+        "break",
+        "break",
         {
             "type": "custom",
-            "format": "     \u001b[90m  \u001b[31m  \u001b[32m  \u001b[33m  \u001b[34m  \u001b[35m  \u001b[36m  \u001b[37m "
-        }
-            ]
+            "format": "     \u001b[90m󰊠  \u001b[31m󰊠  \u001b[32m󰊠  \u001b[33m󰊠  \u001b[34m󰊠  \u001b[35m󰊠  \u001b[36m󰊠  \u001b[37m󰊠 "
+        },
+        "break",
+    ]
 }
