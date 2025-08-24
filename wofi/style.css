@@ -1,7 +1,8 @@
-@define-color base0 #24273a;
-@define-color content #cad3f5;
-@define-color accent #181926;
-@define-color primary #c6a0f6;
+@define-color base0 #1D2021;
+@define-color base1 #282828;
+@define-color content #EBDBB2;
+@define-color accent ##689D6A;
+@define-color primary #458588;
 
 
 window {
@@ -18,20 +19,20 @@ window {
     border-radius: 6px;
     padding-left: 12px;
     padding-right: 12px;
-    font: 13px "Roboto Mono";
+    font: 13px "FantasqueSansM Nerd Font";
     color: @content;
+    background: @base1;
     font-weight: 400;
     border: 1px solid @primary;
     outline: none;
 }
 
 #input:focus {
-    border-color: transparent;
+    border-color: @background;
     outline: none;
 }
 
 #filter {
-    background-color: red;
 }
 
 #inner-box {
@@ -51,6 +52,8 @@ window {
     padding-bottom: 4px;
     padding-left: 12px;
     padding-right: 12px;
+    margin-bottom: 12px;
+    margin-top: 6px;
     background-color: transparent;
     border-radius: 0;
 }
@@ -66,7 +69,7 @@ window {
     padding-right: 4px;
     padding-left: 8px;
     color: @content;
-    font: 13px "Roboto Mono";
+    font: 13px "FantasqueSansM Nerd Font";
 }
 
 #text:selected {
