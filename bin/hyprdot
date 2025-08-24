@@ -3,9 +3,17 @@ import subprocess
 import json
 import argparse
 import sys
+import os
 from datetime import datetime
 
+SCREENSHOT_PATH_FOLDER = os.path.expandvars("$HOME/Pictures/Screenshots")
+
 waybar_data = {"text": "","alt": "", "tooltip": "", "class": "", "percentage": 0 }
+
+def utils__create_screenshot_folder():
+    if not os.path.exists(SCREENSHOT_PATH_FOLDER):
+        os.makedirs(SCREENSHOT_PATH_FOLDER, exist_ok=True)
+        notify(messages="Screenshots folder created at "+SCREENSHOT_PATH_FOLDER)
 
 def notify(title="Hyprdot", messages=""):
     command = ["notify-send", title, messages]
@@ -15,6 +23,7 @@ def notify(title="Hyprdot", messages=""):
     )
 
 def screenshot(param):
+    utils__create_screenshot_folder()
     date = datetime.now()
     if param.full :
         subprocess.run(
@@ -33,7 +42,7 @@ def screenshot(param):
 
     if param.save_full:
         subprocess.run(
-            'grim "$HOME/Pictures/Screenshots/Screenshot From '+str(date)+'.png"',
+            'grim "'+SCREENSHOT_PATH_FOLDER+'/Screenshot From '+str(date)+'.png"',
             shell=True
         )
         notify(messages="Full Screenshot Captured and saved to file")
@@ -41,7 +50,7 @@ def screenshot(param):
 
     if param.save_select:
         subprocess.run(
-            'grim -g "$(slurp)" "$HOME/Pictures/Screenshots/Screenshot From '+str(date)+'.png"',
+            'grim -g "$(slurp)" "'+SCREENSHOT_PATH_FOLDER+'/Screenshot From '+str(date)+'.png"',
             shell=True,
         )
         notify(messages="Screenshot captured and saved to file")
