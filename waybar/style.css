@@ -2,15 +2,16 @@
     border: none;
     font-family: 'FantasqueSansM Nerd Font', 'Symbols Nerd Font Mono';
     font-size: 16px;
-    min-height: 24px;
+    min-height: 0px;
 }
 
 window#waybar {
-    background: transparent;
+    /* background: transparent; */
+    background: #1D2021;
 }
 
 window#waybar > box {
-    margin: 10px 15px 0px 15px;
+    margin: 1px 1px 1px 1px;
 }
 
 tooltip {
@@ -19,15 +20,15 @@ tooltip {
 
 /* Rounded Right */
 #custom-arch, #workspaces, #clock, #network {
-    border-top-right-radius: 8px;
-    border-bottom-right-radius: 8px;
+    border-top-right-radius: 1px;
+    border-bottom-right-radius: 1px;
     margin-right: 12px;
 }
 
 /* Rounded Left */
 #custom-arch, #workspaces, #clock, #cpu {
-    border-top-left-radius: 8px;
-    border-bottom-left-radius: 8px;
+    border-top-left-radius: 1px;
+    border-bottom-left-radius: 1px;
     margin-left: 12px;
 }
 
@@ -36,7 +37,7 @@ tooltip {
     color: #EBDBB2;
     background: #1D2021;
     font-size: 14px;
-    padding: 3px 8px 3px 8px;
+    padding: 4px 8px 4px 8px;
 }
 
 #custom-arch {

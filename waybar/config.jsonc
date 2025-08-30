@@ -3,8 +3,8 @@
     "reload_style_on_change": true,
     "gtk-layer-shell": true,
     "modules-left": ["custom/arch", "hyprland/workspaces"],
-    "modules-center": [],
-    "modules-right": ["cpu", "memory", "disk", "backlight", "pulseaudio", "battery", "network", "clock"],
+    "modules-center": ["clock"],
+    "modules-right": ["cpu", "memory", "disk", "backlight", "pulseaudio", "battery", "network"],
     "custom/arch": {
         "format": " ",
         "tooltip": false
